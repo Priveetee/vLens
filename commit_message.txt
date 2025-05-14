@@ -1,3 +1,0 @@
-feat: Add containerization and backend API for VSphere visualization
-
-Add Docker configuration for containerized deployment including Dockerfile and docker-compose.yml. Implement Python-based API servers for VSphere data collection and serving. Add environment configuration files and remove legacy assets while updating frontend components for improved integration with new backend services.
