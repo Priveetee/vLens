@@ -1,0 +1,95 @@
+/* src/components/DetailNode.css */
+.detail-node {
+  padding: 8px;
+  border-radius: 5px;
+  background: var(--node-bg, linear-gradient(to bottom, #2f3640, #222730));
+  border: 2px solid var(--border-color, #777);
+  border-left-width: 4px;
+  color: var(--text-color, white);
+  width: 180px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.detail-node.selected {
+  box-shadow: 0 0 0 2px white, 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.detail-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.detail-node-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+.detail-node-icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.detail-node-title {
+  font-weight: bold;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-node-content {
+  font-size: 10px;
+}
+
+.detail-node-property {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.property-key {
+  color: #bbb;
+  margin-right: 5px;
+}
+
+.property-value {
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-node-more {
+  font-size: 9px;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Connection count badge */
+.node-connections-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  border: 2px solid #222;
+}

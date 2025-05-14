@@ -1,0 +1,46 @@
+.mini-3d-viewer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.mini-3d-viewer:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.mini-3d-icon {
+  font-size: 16px;
+}
+
+/* Specific colors for different object types */
+.mini-3d-vm {
+  border-left: 3px solid #4285F4;
+}
+
+.mini-3d-datastore {
+  border-left: 3px solid #34A853;
+}
+
+.mini-3d-network {
+  border-left: 3px solid #FBBC05;
+}
+
+.mini-3d-host {
+  border-left: 3px solid #EA4335;
+}
+
+.mini-3d-cluster {
+  border-left: 3px solid #9C27B0;
+}
+
+.mini-3d-default {
+  border-left: 3px solid #607D8B;
+}

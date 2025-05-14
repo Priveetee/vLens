@@ -1,0 +1,36 @@
+services:
+  # Frontend service
+  frontend-vsphere-visualizer:
+    image: tuxxxxxx/api-front:latest
+    ports:
+      - "9120:9120"
+    restart: unless-stopped
+    depends_on:
+      - api-vsphere
+    environment:
+      - REACT_APP_API_URL=http://api-vsphere:8000
+    networks:
+      - vsphere-viz-network
+
+  # Backend service
+  api-vsphere:
+    image: lynear/api-explore:latest 
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./api_server.py:/app/api_server.py
+      - ./vsphere_collector.py:/app/vsphere_collector.py
+      - ./api-vsphere-data:/app/data
+    networks:
+      - vsphere-viz-network
+    # --- Host Configuration ---
+    # Adding explicit host mapping for vCenter server
+    extra_hosts:
+      - "hostname-of-ur-vcenter:ip-adress"
+
+networks:
+  vsphere-viz-network:
+    driver: bridge

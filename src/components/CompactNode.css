@@ -1,0 +1,84 @@
+/* src/components/CompactNode.css */
+.compact-node {
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: var(--node-bg, linear-gradient(to bottom, #2f3640, #222730));
+  border: 2px solid var(--border-color, #777);
+  color: var(--text-color, white);
+  width: 180px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.compact-node.selected {
+  box-shadow: 0 0 0 2px white, 0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.compact-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.compact-node-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0;
+}
+
+.compact-node-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.compact-node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+}
+
+.compact-node-title {
+  font-weight: bold;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compact-node-type {
+  font-size: 10px;
+  color: #bbb;
+  margin-top: 2px;
+}
+
+/* Node type styling */
+.node-vm-on { border-color: #4ade80; }
+.node-vm-off { border-color: #f87171; }
+.node-host { border-color: #60a5fa; }
+.node-cluster { border-color: #a855f7; }
+.node-datastore { border-color: #eab308; }
+.node-network { border-color: #7dd3fc; }
+
+/* Connection count badge */
+.node-connections-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  border: 2px solid #222;
+}

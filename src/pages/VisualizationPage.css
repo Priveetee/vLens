@@ -1,0 +1,1111 @@
+/* Variables CSS pour le thème et les contrôles d'arrière-plan */
+:root {
+  --bg-color: #1e1e24;
+  --text-color: #ffffff;
+  --panel-bg: rgba(30, 34, 42, 0.85);
+  --node-bg: linear-gradient(to bottom, #2f3640, #222730);
+  --accent-color: #007bff;
+  --secondary-bg: #282c34;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --button-bg: #444;
+  --button-hover-bg: #555;
+  --control-panel-bg: rgba(40, 44, 52, 0.85);
+  --node-selected-shadow: 0 0 0 2px white, 0 0 10px rgba(255, 255, 255, 0.5);
+  --search-bg: #333;
+  --search-text: #fff;
+}
+
+:root.light-theme {
+  --bg-color: #f8f9fa;
+  --text-color: #333333;
+  --panel-bg: rgba(255, 255, 255, 0.95);
+  --node-bg: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  --accent-color: #0056b3;
+  --secondary-bg: #e9ecef;
+  --border-color: rgba(0, 0, 0, 0.15);
+  --button-bg: #e2e6ea;
+  --button-hover-bg: #dae0e5;
+  --control-panel-bg: rgba(255, 255, 255, 0.9);
+  --node-selected-shadow: 0 0 0 2px #0056b3, 0 0 10px rgba(0, 86, 179, 0.3);
+  --search-bg: #f1f3f5;
+  --search-text: #333;
+  --font-weight-normal: 500; 
+  --font-weight-bold: 600; 
+  --panel-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --button-text-color: #333;
+  --button-icon-color: #0056b3;
+  --handle-color: #0056b3;
+  --handle-hover-color: #003d80;
+  --node-border-width: 2px;
+  --overlay-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Additional light theme improvements */
+:root.light-theme .react-flow__node {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__edge path {
+  stroke-width: 1.5px;
+}
+
+:root.light-theme .react-flow__controls {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+:root.light-theme .react-flow__controls button {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+:root.light-theme .react-flow__controls-button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #444;
+}
+
+:root.light-theme .react-flow__controls-button svg {
+  fill: var(--accent-color);
+  stroke: var(--accent-color);
+  width: 16px;
+  height: 16px;
+}
+
+:root.light-theme .react-flow__controls-button:hover {
+  background-color: rgba(0, 86, 179, 0.1);
+}
+
+:root.light-theme .react-flow__minimap {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Improved background for light theme */
+:root.light-theme .react-flow__background {
+  background-color: #fafafa;
+}
+
+/* Adjust the dots pattern in light theme */
+:root.light-theme .react-flow__background.dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 1px 1px, #ddd 1px, transparent 1px);
+}
+
+/* Improved light theme controls */
+:root.light-theme .control-group label {
+  color: #505050;
+}
+
+:root.light-theme .control-group select {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+:root.light-theme select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+:root.light-theme .theme-toggle-button {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+:root.light-theme .search-input {
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+:root.light-theme .loading-message-page,
+:root.light-theme .error-message-page,
+:root.light-theme .diagram-placeholder-page {
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Improved light theme control panels */
+:root.light-theme .controls-panel {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+:root.light-theme .control-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+:root.light-theme .control-section-header h4 {
+  color: var(--accent-color);
+}
+
+:root.light-theme .controls-container {
+  background-color: transparent;
+}
+
+:root.light-theme .export-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+:root.light-theme .export-button:hover {
+  background-color: #0046a3;
+}
+
+/* Improved text rendering and font styles for light theme */
+:root.light-theme .visualization-page {
+  font-weight: var(--font-weight-normal);
+}
+
+:root.light-theme h3, 
+:root.light-theme h4, 
+:root.light-theme strong {
+  font-weight: var(--font-weight-bold);
+  color: #333;
+}
+
+/* Improved edge rendering for light theme */
+:root.light-theme .react-flow__edge-path {
+  stroke-opacity: 0.8;
+  stroke-width: 2px;
+}
+
+:root.light-theme .react-flow__edge-text {
+  fill: #333;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px white, 0px 0px 1px white;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Improved edge background for better readability */
+:root.light-theme .react-flow__edge-textbg {
+  fill: rgba(255, 255, 255, 0.9); 
+}
+
+/* Improved icon visibility in light theme */
+:root.light-theme svg {
+  color: #333;
+  fill: currentColor;
+}
+
+:root.light-theme button svg,
+:root.light-theme .control-section svg {
+  color: var(--accent-color);
+  font-size: 1.1em;
+}
+
+:root.light-theme .react-flow__node svg {
+  color: #333;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+:root.light-theme .react-flow__node.node-vm-on svg {
+  color: #22863a;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__node.node-vm-off svg {
+  color: #d73a49;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__node.node-host svg {
+  color: #0366d6;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__node.node-datastore svg {
+  color: #b08800;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__node.node-network svg {
+  color: #1b7cd6;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+:root.light-theme .react-flow__node.node-cluster svg {
+  color: #6f42c1;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Enhanced node styling in light theme */
+:root.light-theme .react-flow__node {
+  border-width: var(--node-border-width);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+:root.light-theme .custom-node-dat-shell,
+:root.light-theme .compact-node,
+:root.light-theme .detail-node {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+:root.light-theme .custom-node-dat-header,
+:root.light-theme .compact-node-header,
+:root.light-theme .detail-node-header {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  border-bottom: 1px solid #dee2e6;
+}
+
+:root.light-theme .node-connections-count {
+  background-color: #0366d6;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* src/pages/VisualizationPage.css */
+.visualization-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Panel and UI Layout Management */
+.node-info-panel {
+  transition: all 0.3s ease;
+}
+
+.controls-panel {
+  position: fixed;
+  top: auto;
+  bottom: 20px; /* Position at bottom instead of top to avoid control overlap */
+  left: 20px;   /* Position on left side instead of right */
+  width: 300px;
+  max-width: calc(100vw - 40px);
+  background: var(--control-panel-bg);
+  border-radius: 8px;
+  box-shadow: var(--panel-shadow, 0 4px 15px rgba(0, 0, 0, 0.3));
+  z-index: 100;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.node-info-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px; 
+  width: 350px;
+  max-width: calc(100vw - 40px);
+  box-shadow: var(--panel-shadow, 0 4px 15px rgba(0, 0, 0, 0.3));
+  z-index: 100;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* Ensure controls don't overlap when node info panel is open */
+.visualization-page.with-info-panel .topology-control-panel {
+  right: 380px; /* Move away from the NodeInfoPanel */
+}
+
+/* Move minimap away from the node info panel when open */
+.visualization-page.with-info-panel .react-flow__minimap {
+  right: 380px; /* Adjust based on NodeInfoPanel width */
+  bottom: 80px; /* Ensure it's not too close to controls */
+}
+
+/* Ensure no overlap with React Flow controls */
+.react-flow__controls {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Add space when DAT display is showing to prevent overlap */
+.visualization-page.with-dat-display .node-info-panel,
+.visualization-page.with-dat-display .controls-panel {
+  z-index: 50; /* Lower z-index when DAT display is active */
+}
+
+/* Manage multiple visible panels */
+.visualization-page.with-info-panel .react-flow__controls,
+.visualization-page.with-info-panel .react-flow__minimap {
+  right: 380px; /* Move away from the NodeInfoPanel */
+}
+
+/* When both DAT display and info panel are visible */
+.visualization-page.with-info-panel.with-dat-display .react-flow__controls,
+.visualization-page.with-info-panel.with-dat-display .react-flow__minimap {
+  display: none; /* Hide controls when DAT is visible to prevent crowding */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1200px) {
+  .visualization-page.with-info-panel .controls-panel {
+    width: 250px; /* Smaller width on medium screens */
+  }
+  
+  .visualization-page.with-info-panel .node-info-panel {
+    width: 320px; /* Smaller width on medium screens */
+  }
+  
+  .visualization-page.with-info-panel .topology-control-panel,
+  .visualization-page.with-info-panel .react-flow__minimap {
+    right: 350px; /* Adjusted for narrower panel */
+  }
+}
+
+@media (max-width: 992px) {
+  .controls-panel {
+    max-height: calc(70vh - 100px); /* Shorter on smaller screens */
+  }
+  
+  .node-info-panel {
+    max-height: calc(70vh - 100px); /* Shorter on smaller screens */
+  }
+  
+  .visualization-page.with-info-panel .controls-panel,
+  .visualization-page.with-info-panel .node-info-panel {
+    bottom: 20px;
+    top: auto;
+    max-height: 45vh;
+  }
+  
+  .visualization-page.with-info-panel .node-info-panel {
+    top: 70px;
+    bottom: auto;
+    max-height: 45vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .visualization-page.with-info-panel .controls-panel {
+    left: 10px;
+    width: calc(100% - 20px);
+    max-width: none;
+    bottom: 10px;
+  }
+  
+  .visualization-page.with-info-panel .node-info-panel {
+    top: 60px;
+    right: 10px;
+    width: calc(100% - 20px);
+    max-width: none;
+  }
+  
+  .visualization-page.with-info-panel .topology-control-panel {
+    right: 10px; /* Reset position on small screens */
+  }
+  
+  .visualization-page.with-info-panel .react-flow__minimap {
+    display: none; /* Hide minimap on small screens to save space */
+  }
+  
+  .topology-control-panel .button-text {
+    display: none; /* Hide button text on mobile */
+  }
+}
+
+/* DAT Display visibility coordination */
+.visualization-page.with-dat-display .controls-panel,
+.visualization-page.with-dat-display .node-info-panel {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: blur(1px);
+  transition: all 0.3s ease;
+  transform: scale(0.98);
+}
+
+/* Create a cleaner interface when DAT display is active */
+.visualization-page.with-dat-display .visualization-controls {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.visualization-page.with-dat-display .react-flow__minimap,
+.visualization-page.with-dat-display .react-flow__controls,
+.visualization-page.with-dat-display .topology-control-panel {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Improved z-index management */
+.topology-control-panel { z-index: 90; }
+.react-flow__controls { z-index: 85; }
+.react-flow__minimap { z-index: 80; }
+.controls-panel { z-index: 100; }
+.node-info-panel { z-index: 110; }
+.dat-display-overlay { z-index: 1500; }
+
+/* Special styling for when DAT display in light theme */
+:root.light-theme .dat-display-overlay {
+  background-color: var(--overlay-bg, rgba(255, 255, 255, 0.85));
+}
+
+:root.light-theme .dat-display-content {
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
+/* Improved scrolling behavior */
+.visualization-page .react-flow {
+  overflow: hidden;
+  transition: filter 0.3s ease;
+}
+
+.visualization-page.with-dat-display .react-flow {
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+/* Style for clean screenshot export */
+body.taking-screenshot .react-flow__controls,
+body.taking-screenshot .react-flow__minimap,
+body.taking-screenshot .react-flow__attribution,
+body.taking-screenshot .node-info-panel,
+body.taking-screenshot .controls-panel,
+body.taking-screenshot .topology-control-panel {
+  display: none !important;
+}
+
+body.taking-screenshot .react-flow__handle {
+  opacity: 0.3 !important;
+}
+
+@media (max-width: 768px) {
+  .controls-panel {
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    max-height: 50vh;
+  }
+  
+  .node-info-panel {
+    top: 60px;
+    right: 10px;
+    width: calc(100% - 20px);
+    max-height: 40vh;
+  }
+}
+
+/* Save vertical space in small screens */
+@media (max-height: 700px) {
+  .controls-panel {
+    max-height: calc(100vh - 100px);
+  }
+  
+  .node-info-panel {
+    max-height: calc(100vh - 80px);
+  }
+}
+
+/* Transition effects for smoother UX */
+.node-info-panel,
+.controls-panel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node-info-panel:hover,
+.controls-panel:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+:root.light-theme .node-info-panel:hover,
+:root.light-theme .controls-panel:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-config-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.back-to-config-button:hover {
+  background-color: #0056b3;
+}
+
+.visualization-controls {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.control-group label {
+  color: #ddd;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.control-group select {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.diagram-area {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+}
+
+.loading-message-page,
+.error-message-page,
+.diagram-placeholder-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  color: white;
+}
+
+.error-message-page { 
+  color: tomato; 
+}
+
+.diagram-placeholder-page { 
+  color: #777; 
+}
+
+/* Styles pour le panneau de contrôle React Flow */
+.topology-control-panel {
+  background-color: var(--control-panel-bg);
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.topology-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.topology-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.topology-control-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.topology-control-button .button-text {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+/* Améliorer les contrôles par défaut de React Flow */
+.react-flow__controls {
+  background-color: rgba(40, 44, 52, 0.85);
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.react-flow__controls-button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.react-flow__controls-button:hover {
+  background-color: #555;
+}
+
+/* Search input styling */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background-color: var(--search-bg);
+  color: var(--search-text);
+  padding: 8px 30px 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: 180px;
+  font-size: 14px;
+}
+
+.clear-search {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Améliorations pour le panneau d'information */
+.topology-info-panel {
+  max-width: 280px;
+  background-color: rgba(30, 34, 42, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 10;
+  padding: 15px;
+  margin: 15px;
+}
+
+.graph-legend {
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+}
+
+.graph-legend h4 {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  color: #7dd3fc;
+  font-weight: 500;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 10px;
+  display: inline-block;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.exploded-view-indicator {
+  padding: 8px 12px;
+  background-color: rgba(0, 127, 255, 0.15);
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.performance-tips {
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+}
+
+.tips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tips-header h4 {
+  font-size: 14px;
+  margin: 0;
+  color: #7dd3fc;
+  font-weight: 500;
+}
+
+.performance-tips ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.performance-tips li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+
+.close-tips-button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.close-tips-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Assurer que la molette de la souris fonctionne correctement */
+.react-flow {
+  touch-action: none;
+  background-color: var(--bg-color);
+}
+
+.react-flow__zoompane {
+  cursor: default;
+}
+
+/* Améliorer l'expérience utilisateur sur les nœuds */
+.react-flow__node:active {
+  cursor: grabbing;
+}
+
+/* Styles pour le panneau d'export */
+.export-panel {
+  width: auto;
+  min-width: 180px;
+}
+
+.export-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Enhanced export button */
+.export-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.export-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+.export-button:hover {
+  background-color: #0062cc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.export-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+:root.light-theme .export-button {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Panneaux de thème */
+.theme-panel {
+  width: auto;
+  min-width: 200px;
+}
+
+.theme-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Enhanced theme toggle button */
+.theme-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  width: 150px;
+}
+
+.theme-toggle-button.dark {
+  background-color: #3a3f4b;
+  color: #f0f0f0;
+  border: 1px solid #4a4f5b;
+}
+
+.theme-toggle-button.dark:hover {
+  background-color: #4a4f5b;
+}
+
+.theme-toggle-button.light {
+  background-color: #e5e9f0;
+  color: #333;
+  border: 1px solid #d5d9e0;
+}
+
+.theme-toggle-button.light:hover {
+  background-color: #d5d9e0;
+}
+
+.theme-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+:root.light-theme .theme-toggle-button.light {
+  background: linear-gradient(to right, #e9ecf3, #f5f7fa);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-button.active {
+  background-color: var(--accent-color);
+}
+
+.background-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-label {
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.background-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.bg-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.bg-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.bg-button.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.opacity-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.opacity-control input {
+  width: 100%;
+}
+
+.opacity-control span {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+/* Styles pour le panneau de contrôle unifié */
+.controls-panel {
+  width: 280px;
+  background-color: var(--panel-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.control-section {
+  position: relative;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.control-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.control-section-header {
+  margin-bottom: 12px;
+}
+
+.control-section h4 {
+  font-size: 14px;
+  color: var(--accent-color);
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+/* Theme toggle redesigned */
+.theme-toggle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--button-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.theme-toggle-button.dark {
+  background-color: #2d3748;
+  color: white;
+}
+
+.theme-toggle-button.light {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.theme-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Export button redesigned */
+.export-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Custom scrollbar for better UX across the application */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.8);
+}
+
+:root.light-theme ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+:root.light-theme ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+}
+
+:root.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}

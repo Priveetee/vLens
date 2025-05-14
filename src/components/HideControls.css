@@ -1,0 +1,7 @@
+.react-flow__controls {
+  display: none !important;
+}
+
+.react-flow__minimap {
+  bottom: 20px !important;
+}
